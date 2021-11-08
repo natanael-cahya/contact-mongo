@@ -1,0 +1,26 @@
+   <div class="container mt-5">
+
+    <div class="row mt-5">
+        <div class="col-md-8">
+       <h1>WEB Server NodeJS(Express Framework)</h1>
+        
+        </h3>
+
+        <h4>Daftar Mahasiswa</h4>
+      <%  if (mahasiswa.length===0) { %>
+            <p>Data Mahasiswa Kosong.</p>
+            <% }else{%> 
+                <% mahasiswa.forEach(key=> { %>
+
+
+                    <ul>
+                        <li>Nama : <%= key.nama %>
+                        </li>
+                        <li>Email : <%= key.email %>
+                        </li>
+                    </ul>
+                    <% }) } %>
+
+                    </div>
+                    </div>
+</div>

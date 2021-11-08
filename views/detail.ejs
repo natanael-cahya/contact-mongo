@@ -1,0 +1,27 @@
+<div class="container mt-5">
+<div class="row">
+    <div class="col-md-8">
+        <h2>Detail Contact</h2>
+
+        <% if (!contact) { %>
+         <h5>Data tidak ditemukan</h5><br>
+         <a href="/contact" class="card-link"> &laquo; Back</a>
+        <% }else{ %>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title"><%= contact.nama %> </h5>
+              <h6 class="card-subtitle mb-2 text-muted"><%= contact.email %> </h6>
+              <p class="card-text"><%= contact.no %> </p>
+              <!-- <a href="/contact/delete/<%= contact.nama %>" onclick="return confirm('yakin ingin menghapus?')" class="btn btn-danger btn-sm card-link"> x Delete</a>
+               -->
+               <form action="/contact?_method=DELETE" method="post" class="d-inline">
+                <input type="hidden" name="nama" value="<%= contact.nama %>">  
+                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('yakin ingin menghapus?')">x Hapus</button>
+               </form>
+              <a href="/contact" class="card-link btn btn-secondary btn-sm"> &laquo; Back</a>
+            </div>
+          </div>
+        <% } %> 
+    </div>
+</div>
+</div>
