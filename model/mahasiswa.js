@@ -9,6 +9,7 @@ const Mahasiswa = mongoose.model('Mahasiswa', {
         required: true,
     },
 
-})
+}, 'mahasiswa' )
+
 
 module.exports = Mahasiswa;
